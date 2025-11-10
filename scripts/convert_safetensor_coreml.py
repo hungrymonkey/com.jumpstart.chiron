@@ -56,7 +56,7 @@ def main(inpath, outpath):
         
         traced_model = torch.jit.trace(wrapped_model, dummy_input['input_ids'])
     
-    inputs = [ct.TensorType(name="input_ids", shape=(1, ct.RangeDim(1, 512)), dtype=np.int32)]
+    inputs = [ct.TensorType(name="input_ids", shape=dummy_input['input_ids'].shape, dtype=np.int32)]
     # Convert to Core ML with fixed shapes
     if 'token_type_ids' in dummy_input:
         inputs.append(ct.TensorType(name="token_type_ids", shape=dummy_input['token_type_ids'].shape))
