@@ -18,13 +18,12 @@ struct DashboardView: View {
                     }
                     .padding()
                     
-                    // Add your main app content here
                     VStack(spacing: 16) {
                         RoundedRectangle(cornerRadius: 12)
                             .fill(Color.blue.opacity(0.1))
                             .frame(height: 100)
                             .overlay(
-                                Text("Feature 1")
+                                Text("Analytics")
                                     .font(.headline)
                             )
                         
@@ -32,7 +31,7 @@ struct DashboardView: View {
                             .fill(Color.green.opacity(0.1))
                             .frame(height: 100)
                             .overlay(
-                                Text("Feature 2")
+                                Text("Quick Actions")
                                     .font(.headline)
                             )
                         
@@ -40,7 +39,7 @@ struct DashboardView: View {
                             .fill(Color.orange.opacity(0.1))
                             .frame(height: 100)
                             .overlay(
-                                Text("Feature 3")
+                                Text("Recent Activity")
                                     .font(.headline)
                             )
                     }
