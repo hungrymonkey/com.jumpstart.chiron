@@ -57,11 +57,11 @@ struct HomeView: View {
                     .padding()
                 }
                 ResumeContentView(
-                                isEditing: $isEditing,
-                                resumeData: $resumeData,
-                                educationEntries: $educationEntries,
-                                experienceEntries: $experienceEntries
-                            )
+                    isEditing: $isEditing,
+                    resumeData: $resumeData,
+                    educationEntries: $educationEntries,
+                    experienceEntries: $experienceEntries
+                )
                 .navigationTitle("My Resume")
                 .onAppear {
                     loadResumeData()
